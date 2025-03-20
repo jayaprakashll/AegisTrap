@@ -1,1 +1,15 @@
+model.pkl - Machine Learning Model for Malware Detection
 
+The model.pkl file is a serialized machine learning model used to classify files as malicious or benign based on extracted features. It is typically trained using static and dynamic analysis features from various malware samples and benign files.
+Key Details:
+
+    Format: Pickle (.pkl), a binary file storing the trained model.
+    Algorithm: Could be a trained Random Forest, SVM, or Deep Learning model (TensorFlow, Scikit-Learn).
+    Training Data: Includes features extracted from executables, scripts, and macro-based malware.
+    Usage: Loaded in ml_model.py for real-time classification.
+
+How It Works in AegisTrap:
+
+    feature_extraction.py extracts important malware features.
+    ml_model.py loads model.pkl and predicts whether the file is malicious.
+    main.py integrates the classification result with YARA scans and VirusTotal analysis.
