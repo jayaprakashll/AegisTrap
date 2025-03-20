@@ -40,7 +40,7 @@ AegisTrap is an advanced AI-powered malware detection system that utilizes **mac
    ```
 3. **Run Malware Analysis**
    ```bash
-   python analyze.py --file sample.exe
+   python Scanner.py --file sample.exe
    ```
 4. **Check Reports & Threat Intelligence**
    - YARA rule matches will be logged in `logs/`
