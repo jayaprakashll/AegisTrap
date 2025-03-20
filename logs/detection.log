@@ -1,1 +1,31 @@
 
+{
+    "file": "sample.exe",
+    "prediction": "malicious",
+    "yara_matches": ["Malware_Generic"],
+    "virustotal": {
+        "positives": 12,
+        "total_scans": 60,
+        "permalink": "https://www.virustotal.com/gui/file/sample_hash"
+    }
+}
+{
+    "file": "benign_script.ps1",
+    "prediction": "benign",
+    "yara_matches": [],
+    "virustotal": {
+        "positives": 0,
+        "total_scans": 60,
+        "permalink": "https://www.virustotal.com/gui/file/benign_hash"
+    }
+}
+{
+    "file": "ransomware_sample.exe",
+    "prediction": "malicious",
+    "yara_matches": ["Ransomware_Detection"],
+    "virustotal": {
+        "positives": 25,
+        "total_scans": 60,
+        "permalink": "https://www.virustotal.com/gui/file/ransomware_hash"
+    }
+}
