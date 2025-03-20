@@ -1,1 +1,61 @@
 
+app_name: "AegisTrap"
+version: "1.0.0"
+mode: "production" 
+
+analysis:
+  enable_static_analysis: true
+  enable_dynamic_analysis: true
+  enable_behavioral_analysis: true
+  max_file_size_mb: 50  
+
+ml_model:
+  model_path: "models/malware_detector.h5"
+  feature_extraction:
+    static_features: true
+    dynamic_features: true
+    opcode_features: true
+  confidence_threshold: 0.85  
+
+yara:
+  enable_yara: true
+  rules_directory: "yara_rules/"
+  update_rules: true
+  aggressive_scanning: false  
+
+virustotal:
+  enable: true
+  api_key: "your_virustotal_api_key"
+  rate_limit_per_minute: 4  
+
+logging:
+  log_file: "logs/detection.log"
+  log_level: "INFO"  
+  enable_console_output: true
+  alert_on_malware_detection: true
+  alert_email: "security_team@example.com"
+
+database:
+  enable_database: true
+  db_type: "postgresql"
+  host: "localhost"
+  port: 5432
+  username: "admin"
+  password: "securepassword"
+  database_name: "aegistrap_logs"
+
+threat_intelligence:
+  enable_external_feeds: true
+  feeds:
+    - "https://threatintel.example.com/malware_feed.json"
+    - "https://cybersecurityalerts.example.com/threats.xml"
+
+performance:
+  multi_threading: true
+  max_threads: 4
+  enable_gpu_acceleration: true
+  cache_results: true
+
+experimental:
+  enable_sandbox_analysis: false
+  deep_learning_model_path: "models/deep_malware_detector.h5"
